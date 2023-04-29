@@ -1,6 +1,6 @@
 import HermitCard from './_hermit-card'
 
-class MEE6CharacterCard extends CharacterCard {
+class MEE6CharacterCard extends HermitCard {
 	constructor() {
 		super({
 			id: 'MEE6',
