@@ -1,0 +1,97 @@
+{
+	"ranks": {
+		"stone": [0],
+		"iron": [1],
+		"gold": [2],
+		"emerald": [3],
+		"diamond": [4],
+		"netherite": [5]
+	},
+
+	" - CHARACTERS - ": "Ordered by type and cost",
+
+	"AUSTRALIAN": "",
+	"chubby-Chubby": 2, // 3 or 4 when fully implemented
+	"oku": 2,
+	"oku-BunnyBoyOku": 1,
+
+	"BACON": "",
+	"chubby-Burger": 1, 
+	"chickenPizzaPan": 1,
+	"hoglin": 2,
+
+	"BOT": "",
+	"MEE6": 1,
+	"carlBot": 0,
+	"donut-Donut": 2, // maybe 3
+	"dankMemer": 1,
+
+	"CAT": "",
+	"andrew-BananaGun": 1,
+	"andrew-CrackKitty": 2,
+	"andrew-Quackitty": 1,
+	"nyanCat": 1,
+	"mrCat": 2,
+	"sleepy-catSleeo": 3,
+
+	"ICECREAM": "",
+	"andrew-IceCreamDealer": 1,
+	"sleepy-ur": 3, // 4 or 5 when fully implemented
+
+	"MINECRAFT": "",
+	"frog": 0,
+	"harison-Harison24": 1,
+	"harison-Harison25": 2,
+
+	"TODDLER": "",
+	"child": 0, //when a good toddler is added change to 1
+	"confusedMeme": 0, //when a good toddler is added change to 1
+
+	" - EFFECTS - ": "",
+// attachable
+
+	"dr_mario": 0,
+	"fire_truck": 0,
+	"wall_of_fruit": 1,
+	"rubber_chicken": 2,
+// single use
+	"ice_cream_sundae": 0,
+	"barricade": 0,
+	"doughnut": 1,
+	"tornado": 1,
+	"mad_doggo": 1,
+	"happy_doggo": 1,
+	"sad_doggo": 1,
+	"shuriken": 1,
+	"chorus_fruit": 1,
+	"lighter": 1,
+	"recycling": 1,
+	"gamer_chair": 2,
+	"diamond_sword": 2,
+	"discord": 2,
+	"bomb": 2,
+	"fire": 3,
+	"rabid_doggo": 3,
+	"sandwich": 3,
+	"nuke": 4,
+	"banana": 4,
+	" - ITEMS - ": "",
+
+	"item_australian_common": 0,
+	"item_bacon_common": 0,
+	"item_bot_common": 0,
+	"item_cat_common": 0,
+	"item_iceCream_common": 0,
+	"item_minecraft_common": 0,
+	"item_toddler_common": 0,
+	"item_any_common": 2,
+
+	"item_australian_rare": 2,
+	"item_bacon_rare": 2,
+	"item_bot_rare": 2,
+	"item_cat_rare": 2,
+	"item_iceCream_rare": 2,
+	"item_minecraft_rare": 2,
+	"item_toddler_rare": 2,
+	"item_any_rare": 5,
+}
