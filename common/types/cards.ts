@@ -8,16 +8,13 @@ export type RankT = {
 }
 
 export type HermitTypeT =
-	| 'balanced'
-	| 'builder'
-	| 'speedrunner'
-	| 'redstone'
-	| 'farm'
-	| 'pvp'
-	| 'terraform'
-	| 'prankster'
-	| 'miner'
-	| 'explorer'
+	| 'australian'
+	| 'bacon'
+	| 'bot'
+	| 'cat'
+	| 'iceCream'
+	| 'minecraft'
+	| 'toddler'
 
 export type CardTypeT = 'item' | 'single_use' | 'effect' | 'hermit' | 'health'
 
@@ -52,7 +49,7 @@ export type AnyCardT = {
 
 export type ItemCardT = AnyCardT & {
 	type: 'item'
-	hermitType: HermitTypeT
+	characterType: HermitTypeT
 }
 
 export type EffectCardT = AnyCardT & {
@@ -76,7 +73,7 @@ export type HermitAttackT = {
 
 export type HermitCardT = AnyCardT & {
 	type: 'hermit'
-	hermitType: HermitTypeT
+	characterType: HermitTypeT
 	health: number
 	primary: HermitAttackT
 	secondary: HermitAttackT
@@ -85,7 +82,7 @@ export type HermitCardT = AnyCardT & {
 export type CardInfoT = ItemCardT | EffectCardT | HermitCardT | HealthCardT
 
 export type CardTypesMapT = {
-	hermit: HermitCardT
+	character: HermitCardT
 	item: ItemCardT
 	effect: EffectCardT
 	single_use: EffectCardT
