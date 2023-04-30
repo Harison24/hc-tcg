@@ -1,6 +1,6 @@
 import CharacterCard from './_character-card'
 import {flipCoin} from '../../../utils'
-import CARDS from '../../../cards'
+import {CHARACTER_CARDS} from '../../../cards'
 /**
  * @typedef {import('models/game-model').GameModel} GameModel
  */
@@ -33,15 +33,15 @@ class ChubbyCharacterCard extends CharacterCard {
 	 */
 	register(game) {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
-			const {attackerCharacterCard, typeAction} = attackState
+			const {moveRef, typeAction} = attackState
 
 			if (typeAction !== 'PRIMARY_ATTACK') return target
 			if (!target.isActive) return target
-			if (attackerCharacterCard.cardId !== this.id) return target
+			if (moveRef.hermitCard.cardId !== this.id) return target
 
-			const targetCharacterInfo = CARDS[target.row.characterCard.cardId]
+			const targetCharacterInfo = CHARACTER_CARDS[target.row.characterCard.cardId]
 			if (targetCharacterInfo.cardId.startsWith('andrew')) {
-				target.multiplier *= 2
+				target.characterMultiplier *= 2
 			}
 
 			return target

@@ -35,17 +35,21 @@ class CrackKittyCharacterCard extends CharacterCard {
 	register(game) {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
 			const {currentPlayer, opponentActiveRow, opponentEffectCardInfo} = game.ds
-			const {attackerCharacterCard, typeAction} = attackState
+			const {moveRef, typeAction} = attackState
 
 			if (typeAction !== 'SECONDARY_ATTACK') return target
 			if (!target.isActive) return target
 
-			if (attackerCharacterCard.cardId !== this.id) return target
+			if (moveRef.cardId !== this.id) return target
 			const coinFlip = flipCoin(currentPlayer)
 			currentPlayer.coinFlips[this.id] = coinFlip
 
 			if (coinFlip[0] === 'heads') {
-				if (target.row.effectCard?.cardId !== 'drMario') {
+				const hasMilkBucket = target.row.effectCard?.cardId === 'dr_mario'
+				const hasDamageEffect = target.row.ailments.some((a) =>
+					['fire', 'rabies'].includes(a.id)
+				)
+				if (!hasMilkBucket && !hasDamageEffect) {
 					target.row.ailments.push({id: 'rabies', duration: -1})
 				}
 			}
