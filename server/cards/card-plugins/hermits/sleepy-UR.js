@@ -35,7 +35,7 @@ class SleepyURCharacterCard extends CharacterCard {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
 			const {currentPlayer} = game.ds
 			const {
-				attackerCharacterCard,
+				moveRef,
 				attackerCharacterInfo,
 				typeAction,
 				attackerActiveRow,
@@ -43,7 +43,7 @@ class SleepyURCharacterCard extends CharacterCard {
 
 			if (typeAction !== 'PRIMARY_ATTACK') return target
 			if (!target.isActive) return target
-			if (attackerCharacterCard.cardId !== this.id) return target
+			if (moveRef.cardId !== this.id) return target
 
 			const dealerRows = currentPlayer.board.rows.filter((row) => {
 				const isDealer = row.characterCard?.cardId.startsWith('andrew-IceCreamDealer')
