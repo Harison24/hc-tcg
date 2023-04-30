@@ -23,7 +23,7 @@ import DonutHermitCard from './donut-Donut'
 import CrackKittyHermitCard from './andrew-CrackKitty'
 import MrCatHermitCard from './mrCat'
 
-const CHARACTER_CARDS = [
+const HERMIT_CARDS = [
 	new BananaGunHermitCard(),
 	new BunnyBoyOkuHermitCard(),
 	new BurgerHermitCard(),
