@@ -35,11 +35,11 @@ class HoglinCharacterCard extends CharacterCard {
 	register(game) {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
 			const {opponentPlayer, opponentActiveRow} = game.ds
-			const {attackerCharacterCard, typeAction} = attackState
+			const {moveRef, typeAction} = attackState
 
 			if (typeAction !== 'SECONDARY_ATTACK') return target
 			if (!target.isActive) return target
-			if (attackerCharacterCard.cardId !== this.id) return target
+			if (moveRef.cardId !== this.id) return target
 
 			const hasOtherCharacters =
 				opponentPlayer.board.rows.filter((row) => !!row.characterCard).length > 1
