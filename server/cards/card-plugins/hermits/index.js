@@ -1,53 +1,53 @@
 // common cards
-import BananaGunCharacterCard from './andrew-BananaGun'
-import BunnyBoyOkuCharacterCard from './oku-BunnyBoyOku'
-import BurgerCharacterCard from './chubby-Burger'
-import ChickenPizzaPanCharacterCard from './will-ChickenPizzaPan'
-import MEE6CharacterCard from './MEE6'
-import DankMemerCharacterCard from './dankMemer'
-import CarlBotCharacterCard from './carlBot'
-import CatSleeoCharacterCard from './sleepy-catSleeo'
-import NyanCatCharacterCard from './nyanCat'
-import QuackittyCharacterCard from './andrew-Quackitty'
-import IceCreamDealerCharacterCard from './andrew-IceCreamDealer'
-import Harison24CharacterCard from './harison-Harison24'
-import FrogCharacterCard from './frog'
-import ChildCharacterCard from './child'
-import ConfusedMemeCharacterCard from './confusedMeme'
+import BananaGunHermitCard from './andrew-BananaGun'
+import BunnyBoyOkuHermitCard from './oku-BunnyBoyOku'
+import BurgerHermitCard from './chubby-Burger'
+import ChickenPizzaPanHermitCard from './will-ChickenPizzaPan'
+import MEE6HermitCard from './MEE6'
+import DankMemerHermitCard from './dankMemer'
+import CarlBotHermitCard from './carlBot'
+import CatSleeoHermitCard from './sleepy-catSleeo'
+import NyanCatHermitCard from './nyanCat'
+import QuackittyHermitCard from './andrew-Quackitty'
+import IceCreamDealerHermitCard from './andrew-IceCreamDealer'
+import Harison24HermitCard from './harison-Harison24'
+import FrogHermitCard from './frog'
+import ChildHermitCard from './child'
+import ConfusedMemeHermitCard from './confusedMeme'
 // rare & ultra rare cards
-import Harison25CharacterCard from './harison-Harison25'
-import SleepyURCharacterCard from './sleepy-UR'
-import ChubbyCharacterCard from './chubby-Chubby'
-import HoglinCharacterCard from './hoglin'
-import DonutCharacterCard from './donut-Donut'
-import CrackKittyCharacterCard from './andrew-CrackKitty'
-import MrCatCharacterCard from './mrCat'
+import Harison25HermitCard from './harison-Harison25'
+import SleepyURHermitCard from './sleepy-UR'
+import ChubbyHermitCard from './chubby-Chubby'
+import HoglinHermitCard from './hoglin'
+import DonutHermitCard from './donut-Donut'
+import CrackKittyHermitCard from './andrew-CrackKitty'
+import MrCatHermitCard from './mrCat'
 
 const CHARACTER_CARDS = [
-	new BananaGunCharacterCard(),
-	new BunnyBoyOkuCharacterCard(),
-	new BurgerCharacterCard(),
-	new ChickenPizzaPanCharacterCard(),
-	new MEE6CharacterCard(),
-	new DankMemerCharacterCard(),
-	new CarlBotCharacterCard(),
-	new CatSleeoCharacterCard(),
-	new NyanCatCharacterCard(),
-	new QuackittyCharacterCard(),
-	new IceCreamDealerCharacterCard(),
-	new Harison24CharacterCard(),
-	new FrogCharacterCard(),
-	new ChildCharacterCard(),
-	new ConfusedMemeCharacterCard(),
+	new BananaGunHermitCard(),
+	new BunnyBoyOkuHermitCard(),
+	new BurgerHermitCard(),
+	new ChickenPizzaPanHermitCard(),
+	new MEE6HermitCard(),
+	new DankMemerHermitCard(),
+	new CarlBotHermitCard(),
+	new CatSleeoHermitCard(),
+	new NyanCatHermitCard(),
+	new QuackittyHermitCard(),
+	new IceCreamDealerHermitCard(),
+	new Harison24HermitCard(),
+	new FrogHermitCard(),
+	new ChildHermitCard(),
+	new ConfusedMemeHermitCard(),
 // rare cards
-	new Harison25CharacterCard (),
-	new HoglinCharacterCard(),
-	new DonutCharacterCard(),
-	new CrackKittyCharacterCard(),
-	new MrCatCharacterCard(),
+	new Harison25HermitCard (),
+	new HoglinHermitCard(),
+	new DonutHermitCard(),
+	new CrackKittyHermitCard(),
+	new MrCatHermitCard(),
 // ultra rare cards
-	new SleepyURCharacterCard(),
-	new ChubbyCharacterCard(),
+	new SleepyURHermitCard(),
+	new ChubbyHermitCard(),
 ]
 
-export default CHARACTER_CARDS
+export default HERMIT_CARDS
