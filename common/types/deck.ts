@@ -4,15 +4,13 @@ export type PlayerDeckT = {
 	name: string
 	icon:
 		| 'any'
-		| 'balanced'
-		| 'builder'
-		| 'explorer'
-		| 'farm'
-		| 'miner'
-		| 'prankster'
-		| 'pvp'
-		| 'redstone'
-		| 'speedrunner'
-		| 'terraform'
+		| 'bacon'
+		| 'bot'
+		| 'iceCream'
+		| 'minecraft'
+		| 'toddler'
+		| 'australian'
+		| 'cat'
+
 	cards: Array<CardT>
 }
