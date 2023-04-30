@@ -87,3 +87,4 @@ export type CardTypesMapT = {
 	effect: EffectCardT
 	single_use: EffectCardT
 	health: HealthCardT
+}
