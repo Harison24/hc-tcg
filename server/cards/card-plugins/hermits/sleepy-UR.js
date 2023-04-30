@@ -5,26 +5,26 @@ import HermitCard from './_hermit-card'
  */
 
 // TODO - can't be used consecutively
-class BdoubleO100RareHermitCard extends HermitCard {
+class SleepyURHermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'bdoubleo100_rare',
-			name: 'Bdubs',
-			rarity: 'rare',
-			hermitType: 'balanced',
-			health: 260,
+			id: 'sleepy_ur',
+			name: 'Sleepy',
+			rarity: 'ultra-rare',
+			hermitType: 'iceCream',
+			health: 250,
 			primary: {
-				name: 'Retexture',
+				name: 'Eat Ice Cream',
 				cost: ['any'],
-				damage: 60,
+				damage: 50,
 				power: null,
 			},
 			secondary: {
-				name: 'Shreep',
-				cost: ['balanced', 'balanced', 'any'],
+				name: 'Sleep',
+				cost: ['iceCream', 'iceCream', 'iceCream'],
 				damage: 0,
 				power:
-					"Bdubs sleeps for the next 2 turns. Can't attack. Restores Full health.\n\nCan still draw and attach cards while sleeping.\n\nCan't be used consecutively.",
+					"Sleepy sleeps for the next 2 turns. Can't attack. Restores Full health.\n\nCan still draw and attach cards while sleeping.\n\nCan't be used consecutively.",
 			},
 		})
 
@@ -87,4 +87,4 @@ class BdoubleO100RareHermitCard extends HermitCard {
 	}
 }
 
-export default BdoubleO100RareHermitCard
+export default SleepyURHermitCard
