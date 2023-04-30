@@ -37,7 +37,7 @@ class ChubbyCharacterCard extends CharacterCard {
 
 			if (typeAction !== 'PRIMARY_ATTACK') return target
 			if (!target.isActive) return target
-			if (moveRef.cardId !== this.id) return target
+			if (moveRef.hermitCard.cardId !== this.id) return target
 
 			const targetCharacterInfo = CHARACTER_CARDS[target.row.characterCard.cardId]
 			if (targetCharacterInfo.cardId.startsWith('andrew')) {
