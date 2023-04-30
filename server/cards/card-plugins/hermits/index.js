@@ -1,6 +1,6 @@
 // common cards
-import BdoubleO100CommonHermitCard from './bdoubleo100-common'
-import Cubfan135CommonHermitCard from './cubfan135-common'
+import MEE6HermitCard from './MEE6'
+import BananaGunHermitCard from './andrew-BananaGun'
 import Docm77CommonHermitCard from './docm77-common'
 import EthosLabCommonHermitCard from './ethoslab-common'
 import FalseSymmetryCommonHermitCard from './falsesymmetry-common'
