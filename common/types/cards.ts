@@ -7,7 +7,7 @@ export type RankT = {
 	cost: number
 }
 
-export type CharacterTypeT =
+export type HermitTypeT =
 	| 'australian'
 	| 'bacon'
 	| 'bot'
@@ -16,7 +16,7 @@ export type CharacterTypeT =
 	| 'minecraft'
 	| 'toddler'
 
-export type CardTypeT = 'item' | 'single_use' | 'effect' | 'character' | 'health'
+export type CardTypeT = 'item' | 'single_use' | 'effect' | 'hermit' | 'health'
 
 export type DamageT = {
 	target?: number
@@ -49,7 +49,7 @@ export type AnyCardT = {
 
 export type ItemCardT = AnyCardT & {
 	type: 'item'
-	characterType: CharacterTypeT
+	hermitType: HermitTypeT
 }
 
 export type EffectCardT = AnyCardT & {
@@ -64,25 +64,25 @@ export type HealthCardT = AnyCardT & {
 	health: number
 }
 
-export type CharacterAttackT = {
+export type HermitAttackT = {
 	name: string
 	cost: Array<string>
 	damage: number
 	power: string | null
 }
 
-export type CharacterCardT = AnyCardT & {
-	type: 'character'
-	characterType: CharacterTypeT
+export type HermitCardT = AnyCardT & {
+	type: 'hermit'
+	hermitType: HermitTypeT
 	health: number
-	primary: CharacterAttackT
-	secondary: CharacterAttackT
+	primary: HermitAttackT
+	secondary: HermitAttackT
 }
 
-export type CardInfoT = ItemCardT | EffectCardT | CharacterCardT | HealthCardT
+export type CardInfoT = ItemCardT | EffectCardT | HermitCardT | HealthCardT
 
 export type CardTypesMapT = {
-	character: CharacterCardT
+	hermit: HermitCardT
 	item: ItemCardT
 	effect: EffectCardT
 	single_use: EffectCardT
