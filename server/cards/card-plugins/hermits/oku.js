@@ -38,12 +38,12 @@ class OkuCharacterCard extends CharacterCard {
 	register(game) {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
 			const {currentPlayer} = game.ds
-			const {attackerCharacterCard, typeAction} = attackState
+			const {moveRef, typeAction} = attackState
 
 			if (typeAction !== 'SECONDARY_ATTACK') return target
 			if (!target.isActive) return target
 
-			if (attackerCharacterCard.cardId !== this.id) return target
+			if (moveRef.cardId !== this.id) return target
 			const coinFlip = flipCoin(currentPlayer)
 			currentPlayer.coinFlips[this.id] = coinFlip
 
