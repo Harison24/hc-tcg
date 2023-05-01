@@ -5,26 +5,26 @@ import {flipCoin, discardCard} from '../../../utils'
  * @typedef {import('models/game-model').GameModel} GameModel
  */
 
-class XisumavoidRareHermitCard extends HermitCard {
+class CrackKittyHermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'xisumavoid_rare',
-			name: 'Xisuma',
+			id: 'andrew-CrackKitty',
+			name: 'Crack Kitty',
 			rarity: 'rare',
-			hermitType: 'redstone',
+			hermitType: 'cat',
 			health: 280,
 			primary: {
-				name: 'Goodness Me',
-				cost: ['redstone'],
-				damage: 60,
+				name: 'Cocaine',
+				cost: ['any'],
+				damage: 40,
 				power: null,
 			},
 			secondary: {
-				name: 'Cup of Tea',
-				cost: ['redstone', 'redstone'],
+				name: 'Feral',
+				cost: ['cat', 'any'],
 				damage: 80,
 				power:
-					'Flip a Coin.\n\nIf heads, this attack also POISONS the opponent. Does an additional +20HP damage per turn until opponent is knocked out.\n\nGoing AFK does not eliminate the POISON.',
+					'Flip a Coin.\n\nIf heads, this attack give the opponent RABIES. Does an additional +20HP damage per turn until opponent is knocked out.\n\nGoing AFK does not eliminate the RABIES.',
 			},
 		})
 	}
@@ -45,12 +45,12 @@ class XisumavoidRareHermitCard extends HermitCard {
 			currentPlayer.coinFlips[this.id] = coinFlip
 
 			if (coinFlip[0] === 'heads') {
-				const hasMilkBucket = target.row.effectCard?.cardId === 'milk_bucket'
+				const hasMilkBucket = target.row.effectCard?.cardId === 'dr_mario'
 				const hasDamageEffect = target.row.ailments.some((a) =>
-					['fire', 'poison'].includes(a.id)
+					['fire', 'rabies'].includes(a.id)
 				)
 				if (!hasMilkBucket && !hasDamageEffect) {
-					target.row.ailments.push({id: 'poison', duration: -1})
+					target.row.ailments.push({id: 'rabies', duration: -1})
 				}
 			}
 
@@ -59,4 +59,4 @@ class XisumavoidRareHermitCard extends HermitCard {
 	}
 }
 
-export default XisumavoidRareHermitCard
+export default CrackKittyHermitCard
