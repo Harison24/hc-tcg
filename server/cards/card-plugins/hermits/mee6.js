@@ -1,12 +1,12 @@
 import HermitCard from './_hermit-card'
 
-class MEE6CharacterCard extends HermitCard {
+class MEE6HermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'MEE6',
+			id: 'mee6',
 			name: 'MEESEXY',
 			rarity: 'common',
-			characterType: 'bot',
+			hermitType: 'bot',
 			health: 280,
 			primary: {
 				name: 'Play Jams',
@@ -26,5 +26,5 @@ class MEE6CharacterCard extends HermitCard {
 	register(game) {}
 }
 
-export default MEE6CharacterCard
+export default MEE6HermitCard
 
