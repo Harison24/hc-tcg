@@ -5,23 +5,23 @@ import {flipCoin} from '../../../utils'
  * @typedef {import('models/game-model').GameModel} GameModel
  */
 
-class TinFoilChefRareHermitCard extends HermitCard {
+class DonutHermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'tinfoilchef_rare',
-			name: 'TFC',
+			id: 'donut_Donut',
+			name: 'Donut',
 			rarity: 'rare',
-			hermitType: 'miner',
+			hermitType: 'bot',
 			health: 300,
 			primary: {
-				name: 'True Hermit',
-				cost: ['any'],
-				damage: 40,
+				name: 'Soon',
+				cost: ['bot'],
+				damage: 30,
 				power: null,
 			},
 			secondary: {
-				name: 'Branch Mine',
-				cost: ['miner', 'miner'],
+				name: 'Grind',
+				cost: ['bot', 'bot'],
 				damage: 80,
 				power:
 					'Flip a Coin.\n\nIf heads, player draws another card at the end of their turn.',
@@ -53,4 +53,4 @@ class TinFoilChefRareHermitCard extends HermitCard {
 	}
 }
 
-export default TinFoilChefRareHermitCard
+export default DonutHermitCard
