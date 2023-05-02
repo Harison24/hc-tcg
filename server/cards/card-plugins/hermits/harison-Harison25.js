@@ -23,25 +23,25 @@ import {flipCoin} from '../../../utils'
 - Solution: Going back to using recovery effects during attack, which will enable using the actionEnd hook.
 */
 
-class GrianRareHermitCard extends HermitCard {
+class Harison25HermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'grian_rare',
-			name: 'Grian',
+			id: 'harison_Harison25',
+			name: 'Harison25',
 			rarity: 'rare',
-			hermitType: 'prankster',
-			health: 300,
-			primary: {
-				name: 'Borrow',
-				cost: ['prankster', 'prankster'],
-				damage: 50,
-				power:
-					"Flip a Coin.\n\nIf heads, Grian takes opponent's active effect card.\n\nPlayer can choose to attach card or discard.\n\n",
-			},
+			characterType: 'minecraft',
+			health: 280,
 			secondary: {
-				name: 'Start a War',
-				cost: ['prankster', 'prankster', 'prankster'],
-				damage: 100,
+				name: 'Robbery',
+				cost: ['minecraft', 'minecraft','any'],
+				damage: 90,
+				power:
+					"Flip a Coin.\n\nIf heads, Harison25 takes opponent's active effect card.\n\nPlayer can choose to attach card or discard.\n\n",
+			},
+			primary: {
+				name: 'Flush',
+				cost: ['minecraft'],
+				damage: 40,
 				power: null,
 			},
 		})
@@ -57,7 +57,7 @@ class GrianRareHermitCard extends HermitCard {
 			const {currentPlayer} = game.ds
 			const {moveRef, typeAction} = attackState
 
-			if (typeAction !== 'PRIMARY_ATTACK') return target
+			if (typeAction !== 'SECONDARY_ATTACK') return target
 			if (!target.isActive) return target
 			if (moveRef.hermitCard.cardId !== this.id) return target
 
@@ -133,4 +133,4 @@ class GrianRareHermitCard extends HermitCard {
 	}
 }
 
-export default GrianRareHermitCard
+export default Harison25HermitCard
