@@ -5,25 +5,26 @@ import {HERMIT_CARDS} from '../../../cards'
  * @typedef {import('models/game-model').GameModel} GameModel
  */
 
-class Iskall85RareHermitCard extends HermitCard {
+class ChubbyHermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'iskall85_rare',
-			name: 'Iskall',
-			rarity: 'rare',
-			hermitType: 'farm',
-			health: 290,
+			id: 'chubby-Chubby',
+			name: 'Chubby',
+			rarity: 'ultra_rare',
+			characterType: 'australian',
+			health: 260,
 			primary: {
-				name: 'Of Doom',
-				cost: ['farm'],
+				name: 'Peratacly',
+				cost: ['australian'],
 				damage: 50,
-				power: null,
+				power: 'Does double damage against Andrews',
 			},
 			secondary: {
-				name: 'Bird Poop',
-				cost: ['farm', 'farm'],
-				damage: 80,
-				power: 'Does double damage versus Builder types.',
+				name: 'That Moment',
+				cost: ['australian','australian'],
+				damage: 70,
+				power:
+					'THIS CODE WENT ON VACATION, SORRY FOR THE INCONVINENCE.',
 			},
 		})
 	}
@@ -35,12 +36,12 @@ class Iskall85RareHermitCard extends HermitCard {
 		game.hooks.attack.tap(this.id, (target, turnAction, attackState) => {
 			const {moveRef, typeAction} = attackState
 
-			if (typeAction !== 'SECONDARY_ATTACK') return target
+			if (typeAction !== 'PRIMARY_ATTACK') return target
 			if (!target.isActive) return target
 			if (moveRef.hermitCard.cardId !== this.id) return target
 
 			const targetHermitInfo = HERMIT_CARDS[target.row.hermitCard.cardId]
-			if (targetHermitInfo.hermitType === 'builder') {
+			if (targetHermitInfo.cardId.startsWith('andrew')) {
 				target.hermitMultiplier *= 2
 			}
 
@@ -49,4 +50,4 @@ class Iskall85RareHermitCard extends HermitCard {
 	}
 }
 
-export default Iskall85RareHermitCard
+export default ChubbyHermitCard
