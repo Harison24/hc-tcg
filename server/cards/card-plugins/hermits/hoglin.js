@@ -5,26 +5,26 @@ import {flipCoin} from '../../../utils'
  * @typedef {import('models/game-model').GameModel} GameModel
  */
 
-class IJevinRareHermitCard extends HermitCard {
+class GoglinHermitCard extends HermitCard {
 	constructor() {
 		super({
-			id: 'ijevin_rare',
-			name: 'Jevin',
+			id: 'hoglin',
+			name: 'Hoglin',
 			rarity: 'rare',
-			hermitType: 'speedrunner',
-			health: 300,
+			characterType: 'bacon',
+			health: 290,
 			primary: {
-				name: 'Your Boi',
-				cost: ['any'],
-				damage: 30,
+				name: 'Charge',
+				cost: ['bacon'],
+				damage: 50,
 				power: null,
 			},
 			secondary: {
-				name: 'Peace Out',
-				cost: ['speedrunner', 'speedrunner', 'any'],
-				damage: 90,
+				name: 'Fling',
+				cost: ['bacon', 'bacon'],
+				damage: 80,
 				power:
-					'After attack, opponent is forced to replace active Hermit with AFK Hermit.\n\nIf there are no AFK Hermits, active Hermit remains in battle.',
+					'After attack, opponent is forced to replace active Character with Benched Character.\n\nIf there are no Benched Characters, active Character remains in battle.',
 			},
 		})
 	}
@@ -52,4 +52,4 @@ class IJevinRareHermitCard extends HermitCard {
 	}
 }
 
-export default IJevinRareHermitCard
+export default HoglinHermitCard
