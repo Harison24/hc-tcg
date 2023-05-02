@@ -17,7 +17,7 @@ class SleepyURHermitCard extends HermitCard {
 				name: 'Eat Ice Cream',
 				cost: ['any'],
 				damage: 50,
-				power: null,
+				power: "MISSING THIS CODE"
 			},
 			secondary: {
 				name: 'Sleep',
