@@ -47,10 +47,10 @@ class CrackKittyHermitCard extends HermitCard {
 			if (coinFlip[0] === 'heads') {
 				const hasMilkBucket = target.row.effectCard?.cardId === 'dr_mario'
 				const hasDamageEffect = target.row.ailments.some((a) =>
-					['fire', 'rabies'].includes(a.id)
+					['fire', 'poison'].includes(a.id)
 				)
 				if (!hasMilkBucket && !hasDamageEffect) {
-					target.row.ailments.push({id: 'rabies', duration: -1})
+					target.row.ailments.push({id: 'poison', duration: -1})
 				}
 			}
 
