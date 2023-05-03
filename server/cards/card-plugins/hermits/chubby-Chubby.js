@@ -41,7 +41,7 @@ class ChubbyHermitCard extends HermitCard {
 			if (moveRef.hermitCard.cardId !== this.id) return target
 
 			const targetHermitInfo = HERMIT_CARDS[target.row.hermitCard.cardId]
-			if (targetHermitInfo.id.startsWith === ('andrew')) {
+			if (targetHermitInfo.id.startsWith('andrew')) {
 				target.hermitMultiplier *= 2
 			}
 
