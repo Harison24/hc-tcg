@@ -5,7 +5,7 @@ import {flipCoin} from '../../../utils'
  * @typedef {import('models/game-model').GameModel} GameModel
  */
 
-class GoglinHermitCard extends HermitCard {
+class HoglinHermitCard extends HermitCard {
 	constructor() {
 		super({
 			id: 'hoglin',
