@@ -6,7 +6,7 @@ class BananaGunCharacterCard extends HermitCard {
 			id: 'andrew-BananaGun',
 			name: 'Banana Gun',
 			rarity: 'common',
-			characterType: 'cat',
+			hermitType: 'cat',
 			health: 290,
 			primary: {
 				name: 'Banana Blast',
